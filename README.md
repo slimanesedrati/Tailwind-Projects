@@ -1,5 +1,5 @@
 # Tailwind-Projects
-mini web projects using Tailwind
+mini projects using Tailwind
 
 |  #  | Project                                                                                                    | Live Demo                                                   |
 | :-: | ---------------------------------------------------------------------------------------------------------- | -----------------------------------------------
@@ -9,3 +9,9 @@ mini web projects using Tailwind
 | 04  |       [Image Gallery](https://github.com/slimanesedrati/Tailwind-Projects/tree/main/mini%20Projects/image-gallery) | [Live Demo](https://slimanesedrati.github.io/Tailwind-Projects/mini%20Projects/image-gallery/) |
 | 05  |       [Login Modal](https://github.com/slimanesedrati/Tailwind-Projects/tree/main/mini%20Projects/login-modal) | [Live Demo](https://slimanesedrati.github.io/Tailwind-Projects/mini%20Projects/login-modal/) |
 
+
+projects using Tailwind
+
+|  #  | Project                                                                                                    | Live Demo                                                   |
+| :-: | ---------------------------------------------------------------------------------------------------------- | -----------------------------------------------
+| 01  |       [Clipboard Website](https://github.com/slimanesedrati/Tailwind-Projects/tree/main/Clipboard%20Website) | [Live Demo](https://slimanesedrati.github.io/Tailwind-Projects/Clipboard%20Website/) |
