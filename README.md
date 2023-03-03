@@ -1,5 +1,5 @@
 # Tailwind-Projects
-mini projects using Tailwind
+mini projects 
 
 |  #  | Project                                                                                                    | Live Demo                                                   |
 | :-: | ---------------------------------------------------------------------------------------------------------- | -----------------------------------------------
@@ -10,7 +10,7 @@ mini projects using Tailwind
 | 05  |       [Login Modal](https://github.com/slimanesedrati/Tailwind-Projects/tree/main/mini%20Projects/login-modal) | [Live Demo](https://slimanesedrati.github.io/Tailwind-Projects/mini%20Projects/login-modal/) |
 
 
-projects using Tailwind
+projects 
 
 |  #  | Project                                                                                                    | Live Demo                                                   |
 | :-: | ---------------------------------------------------------------------------------------------------------- | -----------------------------------------------
