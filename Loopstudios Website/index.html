@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loopstudios Website</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="css/output.css" />
+  </head>
+  <body>
+    <!-- hero section -->
+    <section id="hero">
+      <div class="container relative max-w-6xl mx-auto py-10 px-6 min-h-screen">
+        <div
+          id="overlay"
+          class="hidden z-40 absolute md:hidden bg-black w-screen h-screen top-0 left-0"
+        ></div>
+        <nav
+          class="flex relative justify-between items-center text-white"
+        >
+          <!-- logo -->
+          <img src="images/logo.svg" class="py-2" alt="" />
+          <!-- Menu -->
+          <div
+            id="menu"
+            class="hidden md:flex absolute md:relative uppercase md:capitalize text-xl md:text-base md:font-alata top-52 md:top-0 md:space-x-8 z-40 flex-col md:flex-row items-centr justify-cente md:font-bold"
+          >
+            <div
+              class="hover:text-pink-500 md:hover:text-white md:hover:border-b md:hover: border-white py-2"
+            >
+              <a href="" class="">About</a>
+            </div>
+            <div
+              class="hover:text-pink-500 md:hover:text-white md:hover:border-b md:hover: border-white py-2"
+            >
+              <a href="" class="">Careers</a>
+            </div>
+            <div
+              class="hover:text-pink-500 md:hover:text-white md:hover:border-b md:hover: border-white py-2"
+            >
+              <a href="" class="">Events</a>
+            </div>
+            <div
+              class="hover:text-pink-500 md:hover:text-white md:hover:border-b md:hover: border-white py-2"
+            >
+              <a href="" class="">Products</a>
+            </div>
+            <div
+              class="hover:text-pink-500 md:hover:text-white md:hover:border-b md:hover: border-white py-2"
+            >
+              <a href="" class="">Support</a>
+            </div>
+          </div>
+          <!-- hamburger btn -->
+          <div class="md:hidden">
+            <button
+              id="menu-btn"
+              type="button"
+              class="hamburger block z-40 outline-none"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </nav>
+        <div
+          class="max-w-lg uppercase text-white font-sans text-4xl transform my-36 border-2 md:text-6xl p-5"
+        >
+          Impressive Experiences That Deliver
+        </div>
+      </div>
+    </section>
+
+    <!-- feature Section -->
+    <section id="feature">
+      <div
+        class="container relative max-w-6xl mx-auto flex flex-col md:justify-start space-y-20 md:space-y-0 px-6 md:px-0 md:flex-row my-32"
+      >
+        <img src="./images/desktop/image-interactive.jpg" alt="" />
+
+        <div
+          class="md:absolute flex flex-col justify-center items-center text-center md:text-left bg-white top-48 right-0 md:pl-20 md:py-20 space-y-4"
+        >
+          <h2 class="max-w-md">The leader in interactive VR</h2>
+          <p class="max-w-md">
+            Founded in 2011, Loopstudios has been producing world-class virtual
+            reality projects for some of the best companies around the globe.
+            Our award-winning creations have transformed businesses through
+            digital experiences that bind to their brand.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Creations Section -->
+    <section id="creations">
+      <div
+        class="relative container max-w-6xl px-6 md:px-0 mx-auto space-y-20 pb-20 mb-32"
+      >
+        <h2 class="text-center md:text-left">our creations</h2>
+        <button
+          class="absolute btn bottom-0 px-10 md:bottom-auto left-6 md:left-auto md:-top-20 md:right-0"
+        >
+          see all
+        </button>
+        <div class="grid md:grid-cols-4 gap-10 text-white uppercase text-2xl">
+          <div class="item group">
+            <!-- img desk -->
+            <img
+              src="./images/desktop/image-deep-earth.jpg"
+              class="hidden md:grid group-hover:scale-110 duration-200"
+              alt=""
+            />
+            <!-- img mobile -->
+            <img
+              src="./images/mobile/image-deep-earth.jpg"
+              class="md:hidden"
+              alt=""
+            />
+            <!-- item gradient" -->
+            <div class="item-gradient"></div>
+            <!--  -->
+            <h5>deep earth</h5>
+          </div>
+          <div class="item group">
+            <!-- img desk -->
+            <img
+              src="./images/desktop/image-night-arcade.jpg"
+              alt=""
+              class="hidden md:grid"
+            />
+            <!-- img mobile -->
+            <img
+              src="./images/mobile/image-night-arcade.jpg"
+              alt=""
+              class="md:hidden"
+            />
+            <!-- item gradient" -->
+            <div class="item-gradient"></div>
+            <!--  -->
+            <h5>night arcade</h5>
+          </div>
+          <div class="item group">
+            <!-- img desk -->
+            <img
+              src="./images/desktop/image-soccer-team.jpg"
+              alt=""
+              class="hidden md:grid"
+            />
+            <!-- img mobile -->
+            <img
+              src="./images/mobile/image-soccer-team.jpg"
+              alt=""
+              class="md:hidden"
+            />
+            <!-- item gradient" -->
+            <div class="item-gradient"></div>
+            <!--  -->
+            <h5>soccer team vr</h5>
+          </div>
+          <div class="item group">
+            <!-- img desk -->
+            <img
+              src="./images/desktop/image-grid.jpg"
+              alt=""
+              class="hidden md:grid"
+            />
+            <!-- img mobile -->
+            <img
+              src="./images/mobile/image-grid.jpg"
+              alt=""
+              class="md:hidden"
+            />
+            <!-- item gradient" -->
+            <div class="item-gradient"></div>
+            <!--  -->
+            <h5>the grid</h5>
+          </div>
+          <div class="item group">
+            <!-- img desk -->
+            <img
+              src="./images/desktop/image-from-above.jpg"
+              alt=""
+              class="hidden md:grid"
+            />
+            <!-- img mobile -->
+            <img
+              src="./images/mobile/image-from-above.jpg"
+              alt=""
+              class="md:hidden"
+            />
+            <!-- item gradient" -->
+            <div class="item-gradient"></div>
+            <!--  -->
+            <h5>from up above vr</h5>
+          </div>
+          <div class="item group">
+            <!-- img desk -->
+            <img
+              src="./images/desktop/image-pocket-borealis.jpg"
+              alt=""
+              class="hidden md:grid"
+            />
+            <!-- img mobile -->
+            <img
+              src="./images/mobile/image-pocket-borealis.jpg"
+              alt=""
+              class="md:hidden"
+            />
+            <!-- item gradient" -->
+            <div class="item-gradient"></div>
+            <!--  -->
+            <h5>pocket borealis</h5>
+          </div>
+          <div class="item group">
+            <!-- img desk -->
+            <img
+              src="./images/desktop/image-curiosity.jpg"
+              alt=""
+              class="hidden md:grid"
+            />
+            <!-- img mobile -->
+            <img
+              src="./images/mobile/image-curiosity.jpg"
+              alt=""
+              class="md:hidden"
+            />
+            <!-- item gradient" -->
+            <div class="item-gradient"></div>
+            <!--  -->
+            <h5>the curiosity</h5>
+          </div>
+          <div class="item group">
+            <!-- img desk -->
+            <img
+              src="./images/desktop/image-fisheye.jpg"
+              alt=""
+              class="hidden md:grid"
+            />
+
+            <!-- img mobile -->
+            <img
+              src="./images/mobile/image-fisheye.jpg"
+              alt=""
+              class="md:hidden"
+            />
+            <!-- item gradient" -->
+            <div class="item-gradient"></div>
+            <!--  -->
+            <h5>make it fisheye</h5>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- footer -->
+    <footer class="bg-black">
+      <div class="container max-w-6xl px-10 py-20 mx-auto flex flex-col 
+        space-y-8 md:space-y-0  md:flex-row md:justify-between">
+        <div
+          class="flex flex-col justify-center md:items-start items-center space-y-5 text-white"
+        >
+          <div class="h-8">
+            <img src="images/logo.svg" alt="" />
+          </div>
+          <div
+            class="flex flex-col md:flex-row items-center justify-center font-alata space-y-4 md:space-y-0 md:space-x-4"
+          >
+            <div
+              class="hover:text-white hover:border-b hover: border-white h-8"
+            >
+              <a href="" class="">About</a>
+            </div>
+            <div
+              class="hover:text-white hover:border-b hover: border-white h-8"
+            >
+              <a href="" class="">Careers</a>
+            </div>
+            <div
+              class="hover:text-white hover:border-b hover: border-white h-8"
+            >
+              <a href="" class="">Events</a>
+            </div>
+            <div
+              class="hover:text-white hover:border-b hover: border-white h-8"
+            >
+              <a href="" class="">Products</a>
+            </div>
+            <div
+              class="hover:text-white hover:border-b hover: border-white h-8"
+            >
+              <a href="" class="">Support</a>
+            </div>
+          </div>
+        </div>
+        <div class="flex justify-center items-center flex-col space-y-5 text-gray-500">
+          <div class="flex justify-center items-center space-x-4 ">
+            <div class="h-8">
+              <a href="">
+                <img src="images/icon-facebook.svg" alt="" class="h-6"/>
+              </a>
+            </div>
+            <div class="h-8 ">
+              <a href="">
+                <img src="images/icon-twitter.svg" alt="" class="h-6" />
+              </a>
+            </div>
+            <div class="h-8 ">
+              <a href="">
+                <img src="images/icon-pinterest.svg" alt="" class="h-6" />
+              </a>
+            </div>
+            <div class="h-8 cursor-pointer">
+              <a href="">
+                <img src="images/icon-instagram.svg" alt="" class="h-6" />
+              </a>
+            </div>
+          </div>
+          <div class="font-bold">
+            © 2023 Loopstudios. All Rights Reserved
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

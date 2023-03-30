@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  h2 {
+    @apply uppercase text-4xl font-sans md:text-5xl text-gray-900;
+  }
+}
+
+@layer base {
+  h5 {
+    @apply absolute px-6 duration-200 w-52 bottom-4 md:bottom-8 md:px-10 group-hover:scale-110 group-hover:text-black;
+  }
+}
+
+.item {
+  @apply relative overflow-hidden max-w-max;
+}
+
+.item-gradient {
+  @apply absolute h-full w-full top-0 left-0 group-hover:bg-white opacity-50;
+}
+
+@layer components {
+  .btn {
+    @apply uppercase text-center py-2 border-2 border-black text-lg
+    tracking-widest font-alata hover:bg-black hover:text-white;
+  }
+}
+
+
+#hero {
+  background-image: url("../images/desktop/image-hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 767px) {
+  #hero {
+    background-image: url("../images/mobile/image-hero.jpg");
+  }
+}
+
+.hamburger {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  top: 12px;
+  right: 0;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: white;
+  transition: all 0.25s;
+}
+
+.open span:first-child {
+  transform: rotate(45deg) translateX(5px) translateY(6px);
+}
+
+.open span:nth-child(2) {
+  display: none;
+}
+
+.open span:last-child {
+  transform: rotate(-45deg) translateX(3px) translateY(-3px);
+}
