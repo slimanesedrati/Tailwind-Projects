@@ -15,3 +15,4 @@ projects
 |  #  | Project                                                                                                    | Live Demo                                                   |
 | :-: | ---------------------------------------------------------------------------------------------------------- | -----------------------------------------------
 | 01  |       [Clipboard Website](https://github.com/slimanesedrati/Tailwind-Projects/tree/main/Clipboard%20Website) | [Live Demo](https://slimanesedrati.github.io/Tailwind-Projects/Clipboard%20Website/) |
+| 02  |       [Loopstudios Website](https://github.com/slimanesedrati/Tailwind-Projects/tree/main/Loopstudios%20Website) | [Live Demo](https://slimanesedrati.github.io/Tailwind-Projects/Loopstudios%20Website/) |
