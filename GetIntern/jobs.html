@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link
+      rel="shortcut icon"
+      type="image/png"
+      href="images/favicon-32x32.png"
+    /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/output.css" />
+    <title>GetIntern</title>
+  </head>
+  <body>
+
+    <!-- nav -->
+    <div class="sticky top-0 bg-white z-20  border-b ">
+          <!-- Nav Container -->
+      <nav class="container mx-auto p-6 z-10 ">
+      <!-- Flex Container For All Items -->
+      <div class="flex items-center justify-between">
+        <!-- Flex Container For Logo/Menu -->
+        <div class="flex items-center space-x-20">
+          <!-- Logo -->
+          <h1 class="font-bold text-3xl ">
+            <a href="">GetIntern</a>
+          </h1>
+          <!-- Left Menu -->
+          <div class="hidden space-x-8 font-bold lg:flex">
+            <a href="#" class="text-mediumGray hover:text-darkGray"
+              >Jobs</a
+            >
+            <a href="#" class="text-mediumGray hover:text-darkGray"
+              >Interships</a
+            >
+            <a href="#" class="text-mediumGray hover:text-darkGray"
+              >About Us</a
+            >
+          </div>
+        </div>
+
+        <!-- Right Buttons Menu -->
+        <div
+          class="hidden items-center space-x-6 font-medium text-grayishViolet lg:flex"
+        >
+        <div id="userN" class="relative  text-darkGray">
+          <div  class="flex text-sm select-none justify-center items-center cursor-pointer">
+            Hi,Slimane!
+            <svg xmlns="http://www.w3.org/2000/svg" class="duration-200" id="down" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M10.869 16.6308C10.811 16.5743 10.563 16.3609 10.359 16.1622C9.076
+              14.9971 6.976 11.9576 6.335 10.3668C6.232 10.1252 6.014 9.51437
+              6 9.18802C6 8.8753 6.072 8.5772 6.218 8.29274C6.422 7.93814
+              6.743 7.65368 7.122 7.49781C7.385 7.39747 8.172 7.2416 8.186 7.2416C9.047 
+              7.08573 10.446 7 11.992 7C13.465 7 14.807 7.08573 15.681 7.21335C15.695 7.22796
+              16.673 7.38383 17.008 7.55431C17.62 7.86702 18 8.47784 18 9.13151V9.18802C17.985
+              9.61374 17.605 10.509 17.591 10.509C16.949 12.0141 14.952 14.9834 13.625 16.1768C13.625 16.1768 13.284 16.5129 13.071 16.659C12.765 16.887 12.386 17 12.007 
+              17C11.584 17 11.19 16.8724 10.869 16.6308Z" fill="darkGray"/>
+              </svg>
+          </div>
+          <div id="settings" class="absolute text-sm flex flex-col -right-4 top-8 rounded-md items-center  justify-center
+           space-y-2 p-4 bg-zinc-50 z-40 shadow-lg w-36 hidden">
+            <a href="" class="duration-200  border-b pb-2 hover:text-lightGray">Settings</a>
+            <a href="" class="duration-200   hover:text-gray-400">Logout</a>
+            <div></div>
+          </div>
+        </div>
+        <div>
+          <a href="" class="flex justify-center items-center duration-200 text-blue hover:underline underline-offset-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"><path d="M18 3V5H17V11L19 14V16H13V23H11V16H5V14L7 11V5H6V3H18Z" fill="rgba(0,119,181,1)"></path></svg>
+            Post Listing
+          </a>
+        </div>
+        </div>
+
+        <!-- Hamburger Button -->
+        <button
+          id="menu-btn"
+          class="block hamburger lg:hidden focus:outline-none"
+          type="button"
+        >
+          <span class="hamburger-top"></span>
+          <span class="hamburger-middle"></span>
+          <span class="hamburger-bottom"></span>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div
+        id="menu"
+        class="absolute hidden z-40 p-6 rounded-lg bg-darkGray left-6 right-6 top-20 z-100"
+      >
+        <div
+        class="relative pt-8 flex flex-col items-center justify-center w-full space-y-6 font-bold text-white rounded-sm"
+        >
+        <a href="" class="absolute top-0 left-0 text-accentBlue text-lg">Hi,Slimane!</a>
+        <a href="#" class="w-full text-center">Jobs</a>
+        <a href="#" class="w-full text-center">Interships</a>
+        <a href="#" class="w-full text-center pb-6 border-b">About Us</a>
+        <a href="#" class="w-full py-3 text-center rounded-full bg-red"
+          >Login out</a
+        >
+      </div>
+      </div>
+    </nav>
+    </div>
+
+    <div class="md:sticky top-[5.3rem] flex flex-col justify-center z-10  max-w-screen bg-white py-5">
+
+      <!--  -->
+      <form action="" class="space-y-4 bg-gray-100   md:space-x-3 md:space-y-0 pt-3 md:p-3 rounded-md
+       flex flex-col md:flex-row items-center  justify-between text-darkGray font-medium  mx-auto
+       ">
+      <!--  -->
+        <div class="relative w-full px-4 md:px-0 md:border-r border-gray-300 border-b pb-3 md:pb-0 md:border-b-0">
+          <input type="text" class="border-none focus:outline-none bg-gray-100 md:w-64
+          py-3 px-10 rounded-md 
+          " placeholder="Job Title" >
+          <!--  -->
+          <div class="absolute top-3 pl-2">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M10.7044 3.51898C10.034 3.51898 9.46373 3.9848 9.30365 4.61265H14.6863C14.5263 3.9848 13.956 3.51898 13.2856 3.51898H10.7044ZM16.2071 4.61264H18.1881C20.2891 4.61264 22 6.34428 22 8.47085C22 8.47085 21.94 9.3711 21.92 10.6248C21.918 10.724 21.8699 10.8212 21.7909 10.88C21.3097 11.2354 20.8694 11.5291 20.8294 11.5493C19.1686 12.6632 17.2386 13.447 15.1826 13.8369C15.0485 13.8632 14.9165 13.7934 14.8484 13.6739C14.2721 12.6754 13.1956 12.0253 11.995 12.0253C10.8024 12.0253 9.71586 12.6683 9.12256 13.6678C9.05353 13.7853 8.92346 13.8531 8.7904 13.8278C6.75138 13.4369 4.82141 12.6541 3.17059 11.5594L2.21011 10.8911C2.13007 10.8405 2.08004 10.7493 2.08004 10.6481C2.05003 10.1316 2 8.47085 2 8.47085C2 6.34428 3.71086 4.61264 5.81191 4.61264H7.78289C7.97299 3.1443 9.2036 2 10.7044 2H13.2856C14.7864 2 16.017 3.1443 16.2071 4.61264ZM21.6598 12.8152L21.6198 12.8355C19.5988 14.1924 17.1676 15.0937 14.6163 15.4684C14.2561 15.519 13.8959 15.2861 13.7959 14.9216C13.5758 14.0912 12.8654 13.5443 12.015 13.5443H12.005H11.985C11.1346 13.5443 10.4242 14.0912 10.2041 14.9216C10.1041 15.2861 9.74387 15.519 9.38369 15.4684C6.83242 15.0937 4.4012 14.1924 2.38019 12.8355C2.37019 12.8254 2.27014 12.7646 2.1901 12.8152C2.10005 12.8659 2.10005 12.9874 2.10005 12.9874L2.17009 18.1519C2.17009 20.2785 3.87094 22 5.97199 22H18.018C20.1191 22 21.8199 20.2785 21.8199 18.1519L21.9 12.9874C21.9 12.9874 21.9 12.8659 21.8099 12.8152C21.7599 12.7849 21.6999 12.795 21.6598 12.8152ZM12.7454 17.0583C12.7454 17.4836 12.4152 17.8177 11.995 17.8177C11.5848 17.8177 11.2446 17.4836 11.2446 17.0583V15.7519C11.2446 15.3367 11.5848 14.9924 11.995 14.9924C12.4152 14.9924 12.7454 15.3367 12.7454 15.7519V17.0583Z" fill="darkGray"/>
+            </svg>
+              
+          </div>
+        </div>
+        <!--  -->
+        <div class="relative w-full px-4 md:px-0">
+          <input type="text" class="border-0  focus:outline-none bg-gray-100 w-full md:w-64 py-3 px-10 rounded-md" placeholder="Location">
+          <div class="absolute top-3 pl-2">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 10.3178C3.5 5.71789 7.34388 2 11.9934 2C16.6561 2 20.5 5.71789 20.5 10.3178C20.5 12.6357 19.657 14.7876 18.2695 16.6116C16.7388 18.6235 14.8522 20.3765 12.7285 21.7524C12.2425 22.0704 11.8039 22.0944 11.2704 21.7524C9.13474 20.3765 7.24809 18.6235 5.7305 16.6116C4.34198 14.7876 3.5 12.6357 3.5 10.3178ZM9.19423 10.5768C9.19423 12.1177 10.4517 13.3297 11.9934 13.3297C13.5362 13.3297 14.8058 12.1177 14.8058 10.5768C14.8058 9.0478 13.5362 7.77683 11.9934 7.77683C10.4517 7.77683 9.19423 9.0478 9.19423 10.5768Z" fill="darkGray"/>
+            </svg>
+          </div>
+        </div>
+        <button type="submit" class="w-full flex justify-center bg-blue items-center  rounded-b-md  md:rounded-md px-8 py-3  hover:opacity-70 ">
+          <svg xmlns="http://www.w3.org/2000/svg" class="" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <circle cx="11.7666" cy="11.7666" r="8.98856" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path opacity="0.4" d="M18.0183 18.4852L21.5423 22.0001" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+
+    <!-- Jobs -->
+    <section id="jobs" class="bg-lightbg" >
+    <div class="relative flex flex-col space-y-4 md:space-y-0 md:flex-row justify-between container font-medium mx-auto pb-56 p-6">
+      <div class="flex flex-col">
+        <div class="sticky top-56 w-56 lg:w-80  flex flex-col space-y-8">
+          <div id="hf" class="select-none flex cursor-pointer items-center font-bold text-2xl text-darkGray">
+            <div class="">Filters</div> 
+            <img src="assets/images/down.svg" class="duration-200" id="down_two" alt=""> </div>
+          <div id="filters" class="duration-200 flex flex-col space-y-5 hidden">
+            <div class="flex flex-col space-y-3">
+              <!--  -->
+              <div id="filter_shedule" class="cursor-pointer select-none text-mediumGray text-lg flex items-center">
+                <div>Shedule</div>
+                <svg xmlns="http://www.w3.org/2000/svg" id="down_shedule" class="duration_200" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M10.869 16.6308C10.811 16.5743 10.563 16.3609 10.359 16.1622C9.076
+                  14.9971 6.976 11.9576 6.335 10.3668C6.232 10.1252 6.014 9.51437
+                  6 9.18802C6 8.8753 6.072 8.5772 6.218 8.29274C6.422 7.93814
+                  6.743 7.65368 7.122 7.49781C7.385 7.39747 8.172 7.2416 8.186 7.2416C9.047 
+                  7.08573 10.446 7 11.992 7C13.465 7 14.807 7.08573 15.681 7.21335C15.695 7.22796
+                  16.673 7.38383 17.008 7.55431C17.62 7.86702 18 8.47784 18 9.13151V9.18802C17.985
+                  9.61374 17.605 10.509 17.591 10.509C16.949 12.0141 14.952 14.9834 13.625 16.1768C13.625 16.1768 13.284 16.5129 13.071 16.659C12.765 16.887 12.386 17 12.007 
+                  17C11.584 17 11.19 16.8724 10.869 16.6308Z" fill="#808080"/>
+                  </svg>
+              </div>
+              <!--  -->
+              <div id="menu_shedule" class="flex flex-col space-y-3 hidden text-darkGray">
+                <!--  -->
+                <div>
+                  <input type="checkbox" checked name="checkbox-one" id="checkbox-one" class="bg-gray-200 hover:bg-gray-300 cursor-pointer 
+                    w-5 h-5 border-3 border-amber-500 focus:outline-none rounded-md" />
+                  <label for="checkbox-one" class="ml-3 text-md font-medium">Full time</label>
+                </div>
+                <!--  -->
+                <div>
+                  <input type="checkbox" checked name="checkbox-one" id="checkbox-one" class="bg-gray-200 hover:bg-gray-300 cursor-pointer 
+                    w-5 h-5 border-3 border-amber-500 focus:outline-none rounded-md" />
+                  <label for="checkbox-one" class="ml-3 text-md font-medium">Part time</label>
+                </div>
+                <!--  -->
+                <div>
+                  <input type="checkbox" checked name="checkbox-one" id="checkbox-one" class="bg-gray-200 hover:bg-gray-300 cursor-pointer 
+                    w-5 h-5 border-3 border-amber-500 focus:outline-none rounded-md" />
+                  <label for="checkbox-one" class="ml-3 text-md font-medium">internship</label>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col space-y-3">
+              <div id="filter_remote" class="select-none text-mediumGray text-lg flex items-center cursor-pointer">
+                <div>Remote Preferences</div>
+                <svg xmlns="http://www.w3.org/2000/svg" id="down_remote" class="duration-200" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M10.869 16.6308C10.811 16.5743 10.563 16.3609 10.359 16.1622C9.076
+                  14.9971 6.976 11.9576 6.335 10.3668C6.232 10.1252 6.014 9.51437
+                  6 9.18802C6 8.8753 6.072 8.5772 6.218 8.29274C6.422 7.93814
+                  6.743 7.65368 7.122 7.49781C7.385 7.39747 8.172 7.2416 8.186 7.2416C9.047 
+                  7.08573 10.446 7 11.992 7C13.465 7 14.807 7.08573 15.681 7.21335C15.695 7.22796
+                  16.673 7.38383 17.008 7.55431C17.62 7.86702 18 8.47784 18 9.13151V9.18802C17.985
+                  9.61374 17.605 10.509 17.591 10.509C16.949 12.0141 14.952 14.9834 13.625 16.1768C13.625 16.1768 13.284 16.5129 13.071 16.659C12.765 16.887 12.386 17 12.007 
+                  17C11.584 17 11.19 16.8724 10.869 16.6308Z" fill="Gray"/>
+                </svg>
+              </div>
+              <div id="menu_remote" class="hidden flex text-darkGray flex-col space-y-3">
+                <!--  -->
+                <div>
+                  <input type="checkbox" checked name="checkbox-one" id="checkbox-one" class="bg-gray-200 hover:bg-gray-300 cursor-pointer 
+                    w-5 h-5 border-3 border-amber-500 focus:outline-none rounded-md" />
+                  <label for="checkbox-one" class="ml-3 text-md font-medium">On-Site</label>
+                </div>
+                <!--  -->
+                <div>
+                  <input type="checkbox" checked name="checkbox-one" id="checkbox-one" class="bg-gray-200 hover:bg-gray-300 cursor-pointer 
+                    w-5 h-5 border-3 border-amber-500 focus:outline-none rounded-md" />
+                  <label for="checkbox-one" class="ml-3 text-md font-medium">Remote</label>
+                </div>
+                <!--  -->
+                <div>
+                  <input type="checkbox" checked name="checkbox-one" id="checkbox-one" class="bg-gray-200 hover:bg-gray-300 cursor-pointer 
+                    w-5 h-5 border-3 border-amber-500 focus:outline-none rounded-md" />
+                  <label for="checkbox-one" class="ml-3 text-md font-medium">Hyprid</label>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col space-y-3">
+              <div id="filter_level" class="select-none text-mediumGray text-lg flex items-center cursor-pointer">
+                <div>Professional level</div>
+                <svg xmlns="http://www.w3.org/2000/svg" id="down_level" class="duration-200" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M10.869 16.6308C10.811 16.5743 10.563 16.3609 10.359 16.1622C9.076
+                  14.9971 6.976 11.9576 6.335 10.3668C6.232 10.1252 6.014 9.51437
+                  6 9.18802C6 8.8753 6.072 8.5772 6.218 8.29274C6.422 7.93814
+                  6.743 7.65368 7.122 7.49781C7.385 7.39747 8.172 7.2416 8.186 7.2416C9.047 
+                  7.08573 10.446 7 11.992 7C13.465 7 14.807 7.08573 15.681 7.21335C15.695 7.22796
+                  16.673 7.38383 17.008 7.55431C17.62 7.86702 18 8.47784 18 9.13151V9.18802C17.985
+                  9.61374 17.605 10.509 17.591 10.509C16.949 12.0141 14.952 14.9834 13.625 16.1768C13.625 16.1768 13.284 16.5129 13.071 16.659C12.765 16.887 12.386 17 12.007 
+                  17C11.584 17 11.19 16.8724 10.869 16.6308Z" fill="#808080"/>
+                  </svg>
+              </div>
+              <div id="menu_level" class="hidden flex flex-col space-y-3 text-darkGray">
+                <!-- <div class="flex items-center">
+                  <input id="default-checkbox" type="checkbox" value="" class="w-5 h-5">
+                  <label for="default-checkbox" class="ml-2 text-sm font-medium  ">Tainee level</label>
+                </div> -->
+                <div>
+                  <input type="checkbox" checked name="checkbox-one" id="checkbox-one" class="bg-gray-200 hover:bg-gray-300 cursor-pointer 
+                    w-5 h-5 border-3 border-amber-500 focus:outline-none rounded-md" />
+                  <label for="checkbox-one" class="ml-3 text-md font-medium">Tainee level</label>
+                </div>
+                <!--  -->
+                <div>
+                  <input type="checkbox" checked name="checkbox-one" id="checkbox-one" class="bg-gray-200 hover:bg-gray-300 cursor-pointer 
+                    w-5 h-5 border-3 border-amber-500 focus:outline-none rounded-md" />
+                  <label for="checkbox-one" class="ml-3 text-md font-medium">Junoir level</label>
+                </div>
+                <!--  -->
+                <div>
+                  <input type="checkbox" checked name="checkbox-one" id="checkbox-one" class="bg-gray-200 hover:bg-gray-300 cursor-pointer 
+                    w-5 h-5 border-3 border-amber-500 focus:outline-none rounded-md" />
+                  <label for="checkbox-one" class="ml-3 text-md font-medium">Middle level</label>
+                </div>
+                <!--  -->
+                <div>
+                  <input type="checkbox" checked name="checkbox-one" id="checkbox-one" class="bg-gray-200 hover:bg-gray-300 cursor-pointer 
+                    w-5 h-5 border-3 border-amber-500 focus:outline-none rounded-md" />
+                  <label for="checkbox-one" class="ml-3 text-md font-medium">Senoir level</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  -->
+      <div class="flex flex-col">
+        <div class="pt-1 flex flex-col md:flex-row space-y-2 md:sapce-y-0   justify-between items-center md:space-x-8">
+          <div class="text-veryDarkBlue font-semibold text-2xl">
+            Recomended jobs <span class=" md:pl-2 text-gray-400">520</span>
+          </div>
+          <div class="flex items-center justify-center space-x-1 text-gray-400">
+            <div>
+              Sort by
+              <span class="text-blue">Last posted</span>
+            </div>
+            <svg xmlns="http://www.w3.org/2000/svg" id="down_level" class="duration-200" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M10.869 16.6308C10.811 16.5743 10.563 16.3609 10.359 16.1622C9.076
+              14.9971 6.976 11.9576 6.335 10.3668C6.232 10.1252 6.014 9.51437
+              6 9.18802C6 8.8753 6.072 8.5772 6.218 8.29274C6.422 7.93814
+              6.743 7.65368 7.122 7.49781C7.385 7.39747 8.172 7.2416 8.186 7.2416C9.047 
+              7.08573 10.446 7 11.992 7C13.465 7 14.807 7.08573 15.681 7.21335C15.695 7.22796
+              16.673 7.38383 17.008 7.55431C17.62 7.86702 18 8.47784 18 9.13151V9.18802C17.985
+              9.61374 17.605 10.509 17.591 10.509C16.949 12.0141 14.952 14.9834 13.625 16.1768C13.625 16.1768 13.284 16.5129 13.071 16.659C12.765 16.887 12.386 17 12.007 
+              17C11.584 17 11.19 16.8724 10.869 16.6308Z" fill="#808080"/>
+              </svg>
+          </div>
+        </div>
+        <div class="mt-10 grid justify-center items-center grid-col-1 lg:grid-cols-2 xl:grid-cols-3 gap-5 font-medium">
+          <!--  -->
+          <div class="relative shadow-md duration-200 flex flex-col max-w-sm
+          space-y-7 p-6 rounded-2xl border border-lightGray hover:border-blue ">
+            <div class="absolute text-mediumGray  right-5 top-5">
+              7 Mar
+            </div>
+            <div>
+              <!-- logo -->
+              <img src="assets/images/apple.svg" class="bg-zinc-100 p-2 rounded-full mb-2"  alt="">
+              <!-- company name -->
+            </div>
+            <!--  -->
+            <div>
+              <!-- Job title -->
+              <div class="capitalize font-bold text-xl mb-4">
+                Front end
+              </div>
+              <span class="bg-sky-100 px-3 py-1 text-sm  text-blue rounded-xl">Full-time</span>
+              <span class="bg-pink-100 px-3 py-1 text-sm text-pink-900 rounded-xl">Technology</span>
+            </div>
+            <!--  -->
+            <div class="flex items-center space-x-2 text-mediumGray">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.7689 8.3818H22C22 4.98459 19.9644 3 16.5156 3H7.48444C4.03556 3 2 4.98459 2 8.33847V15.6615C2 19.0154 4.03556 21 7.48444 21H16.5156C19.9644 21 22 19.0154 22 15.6615V15.3495H17.7689C15.8052 15.3495 14.2133 13.7975 14.2133 11.883C14.2133 9.96849 15.8052 8.41647 17.7689 8.41647V8.3818ZM17.7689 9.87241H21.2533C21.6657 9.87241 22 10.1983 22 10.6004V13.131C21.9952 13.5311 21.6637 13.8543 21.2533 13.8589H17.8489C16.8548 13.872 15.9855 13.2084 15.76 12.2643C15.6471 11.6783 15.8056 11.0736 16.1931 10.6122C16.5805 10.1509 17.1573 9.88007 17.7689 9.87241ZM17.92 12.533H18.2489C18.6711 12.533 19.0133 12.1993 19.0133 11.7877C19.0133 11.3761 18.6711 11.0424 18.2489 11.0424H17.92C17.7181 11.0401 17.5236 11.1166 17.38 11.255C17.2364 11.3934 17.1555 11.5821 17.1556 11.779C17.1555 12.1921 17.4964 12.5282 17.92 12.533ZM6.73778 8.3818H12.3822C12.8044 8.3818 13.1467 8.04812 13.1467 7.63649C13.1467 7.22487 12.8044 6.89119 12.3822 6.89119H6.73778C6.31903 6.89116 5.9782 7.2196 5.97333 7.62783C5.97331 8.04087 6.31415 8.37705 6.73778 8.3818Z" fill="#0077B5"/>
+              </svg>
+              <div>
+                $35k - $45k
+              </div>
+            </div>
+            <div>
+              <div class="capitalize text-mediumGray text-lg space-x-1 mb-3 flex items-center">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 10.3178C3.5 5.71789 7.34388 2 11.9934 2C16.6561 2 20.5 5.71789 20.5 10.3178C20.5 12.6357 19.657 14.7876 18.2695 16.6116C16.7388 18.6235 14.8522 20.3765 12.7285 21.7524C12.2425 22.0704 11.8039 22.0944 11.2704 21.7524C9.13474 20.3765 7.24809 18.6235 5.7305 16.6116C4.34198 14.7876 3.5 12.6357 3.5 10.3178ZM9.19423 10.5768C9.19423 12.1177 10.4517 13.3297 11.9934 13.3297C13.5362 13.3297 14.8058 12.1177 14.8058 10.5768C14.8058 9.0478 13.5362 7.77683 11.9934 7.77683C10.4517 7.77683 9.19423 9.0478 9.19423 10.5768Z" fill="darkGray"/>
+                </svg>
+                <div>
+                  msila, 5 juily
+                </div>
+              </div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem in.</p>
+            </div>
+            <div class="flex space-x-3 py-4">
+              <button class="w-1/2 border-2 border-blue text-blue rounded-lg
+              duration-100 hover:bg-blue hover:bg-opacity-10 hover:border-4">
+                <a href="" class="capitalize">contact</a>
+              </button>
+              <button class="bg-blue  text-white w-1/2 py-2 rounded-lg border-2 border-blue
+              duration-150 hover:bg-opacity-75">
+                <a href="" class="capitalize">apply</a>
+              </button>
+            </div>
+          </div>
+          <!--  -->
+          <div class="relative shadow-md duration-200 hover:shadow-xl flex flex-col max-w-sm
+          space-y-7 p-6 rounded-2xl border border-lightGray">
+            <div class="absolute text-mediumGray  right-5 top-5">
+              7 Mar
+            </div>
+            <div>
+              <!-- logo -->
+              <img src="assets/images/apple.svg" class="bg-zinc-100 p-2 rounded-full mb-2"  alt="">
+              <!-- company name -->
+            </div>
+            <!--  -->
+            <div>
+              <!-- Job title -->
+              <div class="capitalize font-bold text-xl mb-4">
+                Front end
+              </div>
+              <span class="bg-sky-100 px-3 py-1 text-sm  text-blue rounded-xl">Full-time</span>
+              <span class="bg-pink-100 px-3 py-1 text-sm text-pink-900 rounded-xl">Technology</span>
+            </div>
+            <!--  -->
+            <div class="flex items-center space-x-2 text-mediumGray">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.7689 8.3818H22C22 4.98459 19.9644 3 16.5156 3H7.48444C4.03556 3 2 4.98459 2 8.33847V15.6615C2 19.0154 4.03556 21 7.48444 21H16.5156C19.9644 21 22 19.0154 22 15.6615V15.3495H17.7689C15.8052 15.3495 14.2133 13.7975 14.2133 11.883C14.2133 9.96849 15.8052 8.41647 17.7689 8.41647V8.3818ZM17.7689 9.87241H21.2533C21.6657 9.87241 22 10.1983 22 10.6004V13.131C21.9952 13.5311 21.6637 13.8543 21.2533 13.8589H17.8489C16.8548 13.872 15.9855 13.2084 15.76 12.2643C15.6471 11.6783 15.8056 11.0736 16.1931 10.6122C16.5805 10.1509 17.1573 9.88007 17.7689 9.87241ZM17.92 12.533H18.2489C18.6711 12.533 19.0133 12.1993 19.0133 11.7877C19.0133 11.3761 18.6711 11.0424 18.2489 11.0424H17.92C17.7181 11.0401 17.5236 11.1166 17.38 11.255C17.2364 11.3934 17.1555 11.5821 17.1556 11.779C17.1555 12.1921 17.4964 12.5282 17.92 12.533ZM6.73778 8.3818H12.3822C12.8044 8.3818 13.1467 8.04812 13.1467 7.63649C13.1467 7.22487 12.8044 6.89119 12.3822 6.89119H6.73778C6.31903 6.89116 5.9782 7.2196 5.97333 7.62783C5.97331 8.04087 6.31415 8.37705 6.73778 8.3818Z" fill="#0077B5"/>
+              </svg>
+              <div>
+                $35k - $45k
+              </div>
+            </div>
+            <div>
+              <div class="capitalize text-mediumGray text-lg space-x-1 mb-3 flex items-center">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 10.3178C3.5 5.71789 7.34388 2 11.9934 2C16.6561 2 20.5 5.71789 20.5 10.3178C20.5 12.6357 19.657 14.7876 18.2695 16.6116C16.7388 18.6235 14.8522 20.3765 12.7285 21.7524C12.2425 22.0704 11.8039 22.0944 11.2704 21.7524C9.13474 20.3765 7.24809 18.6235 5.7305 16.6116C4.34198 14.7876 3.5 12.6357 3.5 10.3178ZM9.19423 10.5768C9.19423 12.1177 10.4517 13.3297 11.9934 13.3297C13.5362 13.3297 14.8058 12.1177 14.8058 10.5768C14.8058 9.0478 13.5362 7.77683 11.9934 7.77683C10.4517 7.77683 9.19423 9.0478 9.19423 10.5768Z" fill="darkGray"/>
+                </svg>
+                <div>
+                  msila, 5 juily
+                </div>
+              </div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem in.</p>
+            </div>
+            <div class="flex space-x-3 py-4">
+              <button class="w-1/2 border-2 border-blue text-blue rounded-lg
+              duration-100 hover:bg-blue hover:bg-opacity-10 hover:border-4">
+                <a href="" class="capitalize">contact</a>
+              </button>
+              <button class="bg-blue  text-white w-1/2 py-2 rounded-lg border-2 border-blue
+              duration-150 hover:bg-opacity-75">
+                <a href="" class="capitalize">apply</a>
+              </button>
+            </div>
+          </div>
+          <!--  -->
+          <div class="relative shadow-md duration-200 hover:shadow-xl flex flex-col max-w-sm
+          space-y-7 p-6 rounded-2xl border border-lightGray">
+            <div class="absolute text-mediumGray  right-5 top-5">
+              7 Mar
+            </div>
+            <div>
+              <!-- logo -->
+              <img src="assets/images/apple.svg" class="bg-zinc-100 p-2 rounded-full mb-2"  alt="">
+              <!-- company name -->
+            </div>
+            <!--  -->
+            <div>
+              <!-- Job title -->
+              <div class="capitalize font-bold text-xl mb-4">
+                Front end
+              </div>
+              <span class="bg-sky-100 px-3 py-1 text-sm  text-blue rounded-xl">Full-time</span>
+              <span class="bg-pink-100 px-3 py-1 text-sm text-pink-900 rounded-xl">Technology</span>
+            </div>
+            <!--  -->
+            <div class="flex items-center space-x-2 text-mediumGray">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.7689 8.3818H22C22 4.98459 19.9644 3 16.5156 3H7.48444C4.03556 3 2 4.98459 2 8.33847V15.6615C2 19.0154 4.03556 21 7.48444 21H16.5156C19.9644 21 22 19.0154 22 15.6615V15.3495H17.7689C15.8052 15.3495 14.2133 13.7975 14.2133 11.883C14.2133 9.96849 15.8052 8.41647 17.7689 8.41647V8.3818ZM17.7689 9.87241H21.2533C21.6657 9.87241 22 10.1983 22 10.6004V13.131C21.9952 13.5311 21.6637 13.8543 21.2533 13.8589H17.8489C16.8548 13.872 15.9855 13.2084 15.76 12.2643C15.6471 11.6783 15.8056 11.0736 16.1931 10.6122C16.5805 10.1509 17.1573 9.88007 17.7689 9.87241ZM17.92 12.533H18.2489C18.6711 12.533 19.0133 12.1993 19.0133 11.7877C19.0133 11.3761 18.6711 11.0424 18.2489 11.0424H17.92C17.7181 11.0401 17.5236 11.1166 17.38 11.255C17.2364 11.3934 17.1555 11.5821 17.1556 11.779C17.1555 12.1921 17.4964 12.5282 17.92 12.533ZM6.73778 8.3818H12.3822C12.8044 8.3818 13.1467 8.04812 13.1467 7.63649C13.1467 7.22487 12.8044 6.89119 12.3822 6.89119H6.73778C6.31903 6.89116 5.9782 7.2196 5.97333 7.62783C5.97331 8.04087 6.31415 8.37705 6.73778 8.3818Z" fill="#0077B5"/>
+              </svg>
+              <div>
+                $35k - $45k
+              </div>
+            </div>
+            <div>
+              <div class="capitalize text-mediumGray text-lg space-x-1 mb-3 flex items-center">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 10.3178C3.5 5.71789 7.34388 2 11.9934 2C16.6561 2 20.5 5.71789 20.5 10.3178C20.5 12.6357 19.657 14.7876 18.2695 16.6116C16.7388 18.6235 14.8522 20.3765 12.7285 21.7524C12.2425 22.0704 11.8039 22.0944 11.2704 21.7524C9.13474 20.3765 7.24809 18.6235 5.7305 16.6116C4.34198 14.7876 3.5 12.6357 3.5 10.3178ZM9.19423 10.5768C9.19423 12.1177 10.4517 13.3297 11.9934 13.3297C13.5362 13.3297 14.8058 12.1177 14.8058 10.5768C14.8058 9.0478 13.5362 7.77683 11.9934 7.77683C10.4517 7.77683 9.19423 9.0478 9.19423 10.5768Z" fill="darkGray"/>
+                </svg>
+                <div>
+                  msila, 5 juily
+                </div>
+              </div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem in.</p>
+            </div>
+            <div class="flex space-x-3 py-4">
+              <button class="w-1/2 border-2 border-blue text-blue rounded-lg
+              duration-100 hover:bg-blue hover:bg-opacity-10 hover:border-4">
+                <a href="" class="capitalize">contact</a>
+              </button>
+              <button class="bg-blue  text-white w-1/2 py-2 rounded-lg border-2 border-blue
+              duration-150 hover:bg-opacity-75">
+                <a href="" class="capitalize">apply</a>
+              </button>
+            </div>
+          </div>
+          <!--  -->
+          <div class="relative shadow-md duration-200 hover:shadow-xl flex flex-col max-w-sm
+          space-y-7 p-6 rounded-2xl border border-lightGray">
+            <div class="absolute text-mediumGray  right-5 top-5">
+              7 Mar
+            </div>
+            <div>
+              <!-- logo -->
+              <img src="assets/images/apple.svg" class="bg-zinc-100 p-2 rounded-full mb-2"  alt="">
+              <!-- company name -->
+            </div>
+            <!--  -->
+            <div>
+              <!-- Job title -->
+              <div class="capitalize font-bold text-xl mb-4">
+                Front end
+              </div>
+              <span class="bg-sky-100 px-3 py-1 text-sm  text-blue rounded-xl">Full-time</span>
+              <span class="bg-pink-100 px-3 py-1 text-sm text-pink-900 rounded-xl">Technology</span>
+            </div>
+            <!--  -->
+            <div class="flex items-center space-x-2 text-mediumGray">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.7689 8.3818H22C22 4.98459 19.9644 3 16.5156 3H7.48444C4.03556 3 2 4.98459 2 8.33847V15.6615C2 19.0154 4.03556 21 7.48444 21H16.5156C19.9644 21 22 19.0154 22 15.6615V15.3495H17.7689C15.8052 15.3495 14.2133 13.7975 14.2133 11.883C14.2133 9.96849 15.8052 8.41647 17.7689 8.41647V8.3818ZM17.7689 9.87241H21.2533C21.6657 9.87241 22 10.1983 22 10.6004V13.131C21.9952 13.5311 21.6637 13.8543 21.2533 13.8589H17.8489C16.8548 13.872 15.9855 13.2084 15.76 12.2643C15.6471 11.6783 15.8056 11.0736 16.1931 10.6122C16.5805 10.1509 17.1573 9.88007 17.7689 9.87241ZM17.92 12.533H18.2489C18.6711 12.533 19.0133 12.1993 19.0133 11.7877C19.0133 11.3761 18.6711 11.0424 18.2489 11.0424H17.92C17.7181 11.0401 17.5236 11.1166 17.38 11.255C17.2364 11.3934 17.1555 11.5821 17.1556 11.779C17.1555 12.1921 17.4964 12.5282 17.92 12.533ZM6.73778 8.3818H12.3822C12.8044 8.3818 13.1467 8.04812 13.1467 7.63649C13.1467 7.22487 12.8044 6.89119 12.3822 6.89119H6.73778C6.31903 6.89116 5.9782 7.2196 5.97333 7.62783C5.97331 8.04087 6.31415 8.37705 6.73778 8.3818Z" fill="#0077B5"/>
+              </svg>
+              <div>
+                $35k - $45k
+              </div>
+            </div>
+            <div>
+              <div class="capitalize text-mediumGray text-lg space-x-1 mb-3 flex items-center">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 10.3178C3.5 5.71789 7.34388 2 11.9934 2C16.6561 2 20.5 5.71789 20.5 10.3178C20.5 12.6357 19.657 14.7876 18.2695 16.6116C16.7388 18.6235 14.8522 20.3765 12.7285 21.7524C12.2425 22.0704 11.8039 22.0944 11.2704 21.7524C9.13474 20.3765 7.24809 18.6235 5.7305 16.6116C4.34198 14.7876 3.5 12.6357 3.5 10.3178ZM9.19423 10.5768C9.19423 12.1177 10.4517 13.3297 11.9934 13.3297C13.5362 13.3297 14.8058 12.1177 14.8058 10.5768C14.8058 9.0478 13.5362 7.77683 11.9934 7.77683C10.4517 7.77683 9.19423 9.0478 9.19423 10.5768Z" fill="darkGray"/>
+                </svg>
+                <div>
+                  msila, 5 juily
+                </div>
+              </div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem in.</p>
+            </div>
+            <div class="flex space-x-3 py-4">
+              <button class="w-1/2 border-2 border-blue text-blue rounded-lg
+              duration-100 hover:bg-blue hover:bg-opacity-10 hover:border-4">
+                <a href="" class="capitalize">contact</a>
+              </button>
+              <button class="bg-blue  text-white w-1/2 py-2 rounded-lg border-2 border-blue
+              duration-150 hover:bg-opacity-75">
+                <a href="" class="capitalize">apply</a>
+              </button>
+            </div>
+          </div>
+          <!--  -->
+          <div class="relative shadow-md duration-200 hover:shadow-xl flex flex-col max-w-sm
+          space-y-7 p-6 rounded-2xl border border-lightGray">
+            <div class="absolute text-mediumGray  right-5 top-5">
+              7 Mar
+            </div>
+            <div>
+              <!-- logo -->
+              <img src="assets/images/apple.svg" class="bg-zinc-100 p-2 rounded-full mb-2"  alt="">
+              <!-- company name -->
+            </div>
+            <!--  -->
+            <div>
+              <!-- Job title -->
+              <div class="capitalize font-bold text-xl mb-4">
+                Front end
+              </div>
+              <span class="bg-sky-100 px-3 py-1 text-sm  text-blue rounded-xl">Full-time</span>
+              <span class="bg-pink-100 px-3 py-1 text-sm text-pink-900 rounded-xl">Technology</span>
+            </div>
+            <!--  -->
+            <div class="flex items-center space-x-2 text-mediumGray">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.7689 8.3818H22C22 4.98459 19.9644 3 16.5156 3H7.48444C4.03556 3 2 4.98459 2 8.33847V15.6615C2 19.0154 4.03556 21 7.48444 21H16.5156C19.9644 21 22 19.0154 22 15.6615V15.3495H17.7689C15.8052 15.3495 14.2133 13.7975 14.2133 11.883C14.2133 9.96849 15.8052 8.41647 17.7689 8.41647V8.3818ZM17.7689 9.87241H21.2533C21.6657 9.87241 22 10.1983 22 10.6004V13.131C21.9952 13.5311 21.6637 13.8543 21.2533 13.8589H17.8489C16.8548 13.872 15.9855 13.2084 15.76 12.2643C15.6471 11.6783 15.8056 11.0736 16.1931 10.6122C16.5805 10.1509 17.1573 9.88007 17.7689 9.87241ZM17.92 12.533H18.2489C18.6711 12.533 19.0133 12.1993 19.0133 11.7877C19.0133 11.3761 18.6711 11.0424 18.2489 11.0424H17.92C17.7181 11.0401 17.5236 11.1166 17.38 11.255C17.2364 11.3934 17.1555 11.5821 17.1556 11.779C17.1555 12.1921 17.4964 12.5282 17.92 12.533ZM6.73778 8.3818H12.3822C12.8044 8.3818 13.1467 8.04812 13.1467 7.63649C13.1467 7.22487 12.8044 6.89119 12.3822 6.89119H6.73778C6.31903 6.89116 5.9782 7.2196 5.97333 7.62783C5.97331 8.04087 6.31415 8.37705 6.73778 8.3818Z" fill="#0077B5"/>
+              </svg>
+              <div>
+                $35k - $45k
+              </div>
+            </div>
+            <div>
+              <div class="capitalize text-mediumGray text-lg space-x-1 mb-3 flex items-center">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 10.3178C3.5 5.71789 7.34388 2 11.9934 2C16.6561 2 20.5 5.71789 20.5 10.3178C20.5 12.6357 19.657 14.7876 18.2695 16.6116C16.7388 18.6235 14.8522 20.3765 12.7285 21.7524C12.2425 22.0704 11.8039 22.0944 11.2704 21.7524C9.13474 20.3765 7.24809 18.6235 5.7305 16.6116C4.34198 14.7876 3.5 12.6357 3.5 10.3178ZM9.19423 10.5768C9.19423 12.1177 10.4517 13.3297 11.9934 13.3297C13.5362 13.3297 14.8058 12.1177 14.8058 10.5768C14.8058 9.0478 13.5362 7.77683 11.9934 7.77683C10.4517 7.77683 9.19423 9.0478 9.19423 10.5768Z" fill="darkGray"/>
+                </svg>
+                <div>
+                  msila, 5 juily
+                </div>
+              </div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem in.</p>
+            </div>
+            <div class="flex space-x-3 py-4">
+              <button class="w-1/2 border-2 border-blue text-blue rounded-lg
+              duration-100 hover:bg-blue hover:bg-opacity-10 hover:border-4">
+                <a href="" class="capitalize">contact</a>
+              </button>
+              <button class="bg-blue  text-white w-1/2 py-2 rounded-lg border-2 border-blue
+              duration-150 hover:bg-opacity-75">
+                <a href="" class="capitalize">apply</a>
+              </button>
+            </div>
+          </div>
+          <!--  -->
+          <div class="relative shadow-md duration-200 hover:shadow-xl flex flex-col max-w-sm
+          space-y-7 p-6 rounded-2xl border border-lightGray">
+            <div class="absolute text-mediumGray  right-5 top-5">
+              7 Mar
+            </div>
+            <div>
+              <!-- logo -->
+              <img src="assets/images/apple.svg" class="bg-zinc-100 p-2 rounded-full mb-2"  alt="">
+              <!-- company name -->
+            </div>
+            <!--  -->
+            <div>
+              <!-- Job title -->
+              <div class="capitalize font-bold text-xl mb-4">
+                Front end
+              </div>
+              <span class="bg-sky-100 px-3 py-1 text-sm  text-blue rounded-xl">Full-time</span>
+              <span class="bg-pink-100 px-3 py-1 text-sm text-pink-900 rounded-xl">Technology</span>
+            </div>
+            <!--  -->
+            <div class="flex items-center space-x-2 text-mediumGray">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.7689 8.3818H22C22 4.98459 19.9644 3 16.5156 3H7.48444C4.03556 3 2 4.98459 2 8.33847V15.6615C2 19.0154 4.03556 21 7.48444 21H16.5156C19.9644 21 22 19.0154 22 15.6615V15.3495H17.7689C15.8052 15.3495 14.2133 13.7975 14.2133 11.883C14.2133 9.96849 15.8052 8.41647 17.7689 8.41647V8.3818ZM17.7689 9.87241H21.2533C21.6657 9.87241 22 10.1983 22 10.6004V13.131C21.9952 13.5311 21.6637 13.8543 21.2533 13.8589H17.8489C16.8548 13.872 15.9855 13.2084 15.76 12.2643C15.6471 11.6783 15.8056 11.0736 16.1931 10.6122C16.5805 10.1509 17.1573 9.88007 17.7689 9.87241ZM17.92 12.533H18.2489C18.6711 12.533 19.0133 12.1993 19.0133 11.7877C19.0133 11.3761 18.6711 11.0424 18.2489 11.0424H17.92C17.7181 11.0401 17.5236 11.1166 17.38 11.255C17.2364 11.3934 17.1555 11.5821 17.1556 11.779C17.1555 12.1921 17.4964 12.5282 17.92 12.533ZM6.73778 8.3818H12.3822C12.8044 8.3818 13.1467 8.04812 13.1467 7.63649C13.1467 7.22487 12.8044 6.89119 12.3822 6.89119H6.73778C6.31903 6.89116 5.9782 7.2196 5.97333 7.62783C5.97331 8.04087 6.31415 8.37705 6.73778 8.3818Z" fill="#0077B5"/>
+              </svg>
+              <div>
+                $35k - $45k
+              </div>
+            </div>
+            <div>
+              <div class="capitalize text-mediumGray text-lg space-x-1 mb-3 flex items-center">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 10.3178C3.5 5.71789 7.34388 2 11.9934 2C16.6561 2 20.5 5.71789 20.5 10.3178C20.5 12.6357 19.657 14.7876 18.2695 16.6116C16.7388 18.6235 14.8522 20.3765 12.7285 21.7524C12.2425 22.0704 11.8039 22.0944 11.2704 21.7524C9.13474 20.3765 7.24809 18.6235 5.7305 16.6116C4.34198 14.7876 3.5 12.6357 3.5 10.3178ZM9.19423 10.5768C9.19423 12.1177 10.4517 13.3297 11.9934 13.3297C13.5362 13.3297 14.8058 12.1177 14.8058 10.5768C14.8058 9.0478 13.5362 7.77683 11.9934 7.77683C10.4517 7.77683 9.19423 9.0478 9.19423 10.5768Z" fill="darkGray"/>
+                </svg>
+                <div>
+                  msila, 5 juily
+                </div>
+              </div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem in.</p>
+            </div>
+            <div class="flex space-x-3 py-4">
+              <button class="w-1/2 border-2 border-blue text-blue rounded-lg
+              duration-100 hover:bg-blue hover:bg-opacity-10 hover:border-4">
+                <a href="" class="capitalize">contact</a>
+              </button>
+              <button class="bg-blue  text-white w-1/2 py-2 rounded-lg border-2 border-blue
+              duration-150 hover:bg-opacity-75">
+                <a href="" class="capitalize">apply</a>
+              </button>
+            </div>
+          </div>
+          <!--  -->
+          <div class="relative shadow-md duration-200 hover:shadow-xl flex flex-col max-w-sm
+          space-y-7 p-6 rounded-2xl border border-lightGray">
+            <div class="absolute text-mediumGray  right-5 top-5">
+              7 Mar
+            </div>
+            <div>
+              <!-- logo -->
+              <img src="assets/images/apple.svg" class="bg-zinc-100 p-2 rounded-full mb-2"  alt="">
+              <!-- company name -->
+            </div>
+            <!--  -->
+            <div>
+              <!-- Job title -->
+              <div class="capitalize font-bold text-xl mb-4">
+                Front end
+              </div>
+              <span class="bg-sky-100 px-3 py-1 text-sm  text-blue rounded-xl">Full-time</span>
+              <span class="bg-pink-100 px-3 py-1 text-sm text-pink-900 rounded-xl">Technology</span>
+            </div>
+            <!--  -->
+            <div class="flex items-center space-x-2 text-mediumGray">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.7689 8.3818H22C22 4.98459 19.9644 3 16.5156 3H7.48444C4.03556 3 2 4.98459 2 8.33847V15.6615C2 19.0154 4.03556 21 7.48444 21H16.5156C19.9644 21 22 19.0154 22 15.6615V15.3495H17.7689C15.8052 15.3495 14.2133 13.7975 14.2133 11.883C14.2133 9.96849 15.8052 8.41647 17.7689 8.41647V8.3818ZM17.7689 9.87241H21.2533C21.6657 9.87241 22 10.1983 22 10.6004V13.131C21.9952 13.5311 21.6637 13.8543 21.2533 13.8589H17.8489C16.8548 13.872 15.9855 13.2084 15.76 12.2643C15.6471 11.6783 15.8056 11.0736 16.1931 10.6122C16.5805 10.1509 17.1573 9.88007 17.7689 9.87241ZM17.92 12.533H18.2489C18.6711 12.533 19.0133 12.1993 19.0133 11.7877C19.0133 11.3761 18.6711 11.0424 18.2489 11.0424H17.92C17.7181 11.0401 17.5236 11.1166 17.38 11.255C17.2364 11.3934 17.1555 11.5821 17.1556 11.779C17.1555 12.1921 17.4964 12.5282 17.92 12.533ZM6.73778 8.3818H12.3822C12.8044 8.3818 13.1467 8.04812 13.1467 7.63649C13.1467 7.22487 12.8044 6.89119 12.3822 6.89119H6.73778C6.31903 6.89116 5.9782 7.2196 5.97333 7.62783C5.97331 8.04087 6.31415 8.37705 6.73778 8.3818Z" fill="#0077B5"/>
+              </svg>
+              <div>
+                $35k - $45k
+              </div>
+            </div>
+            <div>
+              <div class="capitalize text-mediumGray text-lg space-x-1 mb-3 flex items-center">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 10.3178C3.5 5.71789 7.34388 2 11.9934 2C16.6561 2 20.5 5.71789 20.5 10.3178C20.5 12.6357 19.657 14.7876 18.2695 16.6116C16.7388 18.6235 14.8522 20.3765 12.7285 21.7524C12.2425 22.0704 11.8039 22.0944 11.2704 21.7524C9.13474 20.3765 7.24809 18.6235 5.7305 16.6116C4.34198 14.7876 3.5 12.6357 3.5 10.3178ZM9.19423 10.5768C9.19423 12.1177 10.4517 13.3297 11.9934 13.3297C13.5362 13.3297 14.8058 12.1177 14.8058 10.5768C14.8058 9.0478 13.5362 7.77683 11.9934 7.77683C10.4517 7.77683 9.19423 9.0478 9.19423 10.5768Z" fill="darkGray"/>
+                </svg>
+                <div>
+                  msila, 5 juily
+                </div>
+              </div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem in.</p>
+            </div>
+            <div class="flex space-x-3 py-4">
+              <button class="w-1/2 border-2 border-blue text-blue rounded-lg
+              duration-100 hover:bg-blue hover:bg-opacity-10 hover:border-4">
+                <a href="" class="capitalize">contact</a>
+              </button>
+              <button class="bg-blue  text-white w-1/2 py-2 rounded-lg border-2 border-blue
+              duration-150 hover:bg-opacity-75">
+                <a href="" class="capitalize">apply</a>
+              </button>
+            </div>
+          </div>
+          <!--  -->
+          <div class="relative shadow-md duration-200 hover:shadow-xl flex flex-col max-w-sm
+          space-y-7 p-6 rounded-2xl border border-lightGray">
+            <div class="absolute text-mediumGray  right-5 top-5">
+              7 Mar
+            </div>
+            <div>
+              <!-- logo -->
+              <img src="assets/images/apple.svg" class="bg-zinc-100 p-2 rounded-full mb-2"  alt="">
+              <!-- company name -->
+            </div>
+            <!--  -->
+            <div>
+              <!-- Job title -->
+              <div class="capitalize font-bold text-xl mb-4">
+                Front end
+              </div>
+              <span class="bg-sky-100 px-3 py-1 text-sm  text-blue rounded-xl">Full-time</span>
+              <span class="bg-pink-100 px-3 py-1 text-sm text-pink-900 rounded-xl">Technology</span>
+            </div>
+            <!--  -->
+            <div class="flex items-center space-x-2 text-mediumGray">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M17.7689 8.3818H22C22 4.98459 19.9644 3 16.5156 3H7.48444C4.03556 3 2 4.98459 2 8.33847V15.6615C2 19.0154 4.03556 21 7.48444 21H16.5156C19.9644 21 22 19.0154 22 15.6615V15.3495H17.7689C15.8052 15.3495 14.2133 13.7975 14.2133 11.883C14.2133 9.96849 15.8052 8.41647 17.7689 8.41647V8.3818ZM17.7689 9.87241H21.2533C21.6657 9.87241 22 10.1983 22 10.6004V13.131C21.9952 13.5311 21.6637 13.8543 21.2533 13.8589H17.8489C16.8548 13.872 15.9855 13.2084 15.76 12.2643C15.6471 11.6783 15.8056 11.0736 16.1931 10.6122C16.5805 10.1509 17.1573 9.88007 17.7689 9.87241ZM17.92 12.533H18.2489C18.6711 12.533 19.0133 12.1993 19.0133 11.7877C19.0133 11.3761 18.6711 11.0424 18.2489 11.0424H17.92C17.7181 11.0401 17.5236 11.1166 17.38 11.255C17.2364 11.3934 17.1555 11.5821 17.1556 11.779C17.1555 12.1921 17.4964 12.5282 17.92 12.533ZM6.73778 8.3818H12.3822C12.8044 8.3818 13.1467 8.04812 13.1467 7.63649C13.1467 7.22487 12.8044 6.89119 12.3822 6.89119H6.73778C6.31903 6.89116 5.9782 7.2196 5.97333 7.62783C5.97331 8.04087 6.31415 8.37705 6.73778 8.3818Z" fill="#0077B5"/>
+              </svg>
+              <div>
+                $35k - $45k
+              </div>
+            </div>
+            <div>
+              <div class="capitalize text-mediumGray text-lg space-x-1 mb-3 flex items-center">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 10.3178C3.5 5.71789 7.34388 2 11.9934 2C16.6561 2 20.5 5.71789 20.5 10.3178C20.5 12.6357 19.657 14.7876 18.2695 16.6116C16.7388 18.6235 14.8522 20.3765 12.7285 21.7524C12.2425 22.0704 11.8039 22.0944 11.2704 21.7524C9.13474 20.3765 7.24809 18.6235 5.7305 16.6116C4.34198 14.7876 3.5 12.6357 3.5 10.3178ZM9.19423 10.5768C9.19423 12.1177 10.4517 13.3297 11.9934 13.3297C13.5362 13.3297 14.8058 12.1177 14.8058 10.5768C14.8058 9.0478 13.5362 7.77683 11.9934 7.77683C10.4517 7.77683 9.19423 9.0478 9.19423 10.5768Z" fill="darkGray"/>
+                </svg>
+                <div>
+                  msila, 5 juily
+                </div>
+              </div>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem in.</p>
+            </div>
+            <div class="flex space-x-3 py-4">
+              <button class="w-1/2 border-2 border-blue text-blue rounded-lg
+              duration-100 hover:bg-blue hover:bg-opacity-10 hover:border-4">
+                <a href="" class="capitalize">contact</a>
+              </button>
+              <button class="bg-blue  text-white w-1/2 py-2 rounded-lg border-2 border-blue
+              duration-150 hover:bg-opacity-75">
+                <a href="" class="capitalize">apply</a>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="absolute bottom-20 text-darkGray right-0 p-6 flex items-center space-x-4">
+          <div>
+            page
+          </div>
+          <div class="flex space-x-2 justify-center items-center">
+            <input type="text" placeholder="1" class="w-20 placeholder:text-center focus:outline-lightGray py-2 rounded-2xl border border-lightGray"> 
+            <div>
+              of 200
+            </div>
+          </div>
+          <div class="flex space-x-4 items-center bg-gray-100 py-2 px-2 rounded-lg">            
+              <svg width="24" height="24" viewBox="0 0 24 24" class="cursor-pointer" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.8585 17.4101C12.0925 17.2839 12.2384 17.0438 12.2384 16.7827V12.7173H20.2657C20.671 12.7173 21 12.396 21 12C21 11.6041 20.671 11.2828 20.2657 11.2828H12.2384V7.21731C12.2384 6.95527 12.0925 6.71523 11.8585 6.58995C11.6245 6.46275 11.3386 6.47136 11.1125 6.61003L3.34267 11.3927C3.12924 11.5247 3 11.7533 3 12C3 12.2468 3.12924 12.4753 3.34267 12.6073L11.1125 17.39C11.2319 17.4627 11.368 17.5 11.5041 17.5C11.6255 17.5 11.7479 17.4694 11.8585 17.4101Z" fill="rgb(0,119,181)"/>
+              </svg>
+              <!--  -->
+              <svg width="24" height="24" class="cursor-pointer" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.1415 6.5899C11.9075 6.71614 11.7616 6.95618 11.7616 7.21726V11.2827H3.73429C3.32896 11.2827 3 11.604 3 12C3 12.3959 3.32896 12.7172 3.73429 12.7172H11.7616V16.7827C11.7616 17.0447 11.9075 17.2848 12.1415 17.4101C12.3755 17.5372 12.6614 17.5286 12.8875 17.39L20.6573 12.6073C20.8708 12.4753 21 12.2467 21 12C21 11.7532 20.8708 11.5247 20.6573 11.3927L12.8875 6.60998C12.7681 6.5373 12.632 6.5 12.4959 6.5C12.3745 6.5 12.2521 6.5306 12.1415 6.5899Z" fill="rgb(0,119,181)"/>
+              </svg>
+                               
+          </div>
+        </div>
+      </div>
+      <div>
+    </div>
+  </section>
+
+
+    <!-- Footer -->
+    <footer class="py-16 bg-veryDarkViolet">
+      <div
+        class="container px-6 flex flex-col items-center justify-between mx-auto space-y-16 lg:flex-row lg:space-y-0 lg:items-start"
+      >
+        <!-- Logo -->
+        <h1 class="font-bold text-3xl text-white ">
+          <a href="">GetIntern</a>
+        </h1>
+
+        <!-- Menus Container -->
+        <div
+          class="flex flex-col space-y-16 lg:space-x-20 lg:flex-row lg:space-y-0"
+        >
+          <!-- Menu 1 -->
+          <div class="flex flex-col items-center w-full lg:items-start">
+            <div class="mb-5 font-bold text-white capitalize">Features</div>
+            <div class="flex flex-col items-center space-y-3 lg:items-start">
+              <a href="#" class="capitalize text-grayishViolet hover:text-cyan"
+                >Link shortening</a
+              >
+              <a href="#" class="capitalize text-grayishViolet hover:text-cyan"
+                >Branded links</a
+              >
+              <a href="#" class="capitalize text-grayishViolet hover:text-cyan"
+                >Analytics</a
+              >
+            </div>
+          </div>
+
+          <!-- Menu 2 -->
+          <div class="flex flex-col items-center w-full lg:items-start">
+            <div class="mb-5 font-bold text-white capitalize">Resources</div>
+            <div class="flex flex-col items-center space-y-3 lg:items-start">
+              <a href="#" class="capitalize text-grayishViolet hover:text-cyan"
+                >Blog</a
+              >
+              <a href="#" class="capitalize text-grayishViolet hover:text-cyan"
+                >Developers</a
+              >
+              <a href="#" class="capitalize text-grayishViolet hover:text-cyan"
+                >Support</a
+              >
+            </div>
+          </div>
+
+          <!-- Menu 3 -->
+          <div class="flex flex-col items-center w-full lg:items-start">
+            <div class="mb-5 font-bold text-white capitalize">Company</div>
+            <div class="flex flex-col items-center space-y-3 lg:items-start">
+              <a href="#" class="capitalize text-grayishViolet hover:text-cyan"
+                >About</a
+              >
+              <a href="#" class="capitalize text-grayishViolet hover:text-cyan"
+                >Our Team</a
+              >
+              <a href="#" class="capitalize text-grayishViolet hover:text-cyan"
+                >Careers</a
+              >
+              <a href="#" class="capitalize text-grayishViolet hover:text-cyan"
+                >Contact</a
+              >
+            </div>
+          </div>
+        </div>
+
+
+
+        <!-- Social Container -->
+        <div class="flex space-x-6">
+          <a href="#">
+            <img src="assets/images/instagram.svg" alt="" class="ficon" />
+          </a>
+          <a href="#">
+            <img src="assets/images/meta.svg" alt="" class="ficon" />
+          </a>
+          <a href="#">
+            <img src="assets/images/facebook.svg" alt="" class="ficon" />
+          </a>
+          <a href="#">
+            <img src="assets/images/microsoft.svg" alt="" class="ficon" />
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="js/script.js" defer></script>
+</html>
